@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context="com.cadaver_funeral.calculator.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/numberInput1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="@string/hint_input_number"
+            android:inputType="number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/calcButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="@string/button_calc"
+            app:layout_constraintLeft_toRightOf="@+id/numberInput1"
+            app:layout_constraintTop_toTopOf="@+id/numberInput1" />
+
+        <Spinner
+            android:id="@+id/operatorSelector"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:entries="@array/operators"
+            app:layout_constraintLeft_toLeftOf="@+id/numberInput1"
+            app:layout_constraintRight_toLeftOf="@+id/calcButton1"
+            app:layout_constraintTop_toBottomOf="@+id/calcButton1" />
+
+        <EditText
+            android:id="@+id/numberInput2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:hint="@string/hint_input_number"
+            android:inputType="number"
+            app:layout_constraintLeft_toLeftOf="@+id/numberInput1"
+            app:layout_constraintRight_toRightOf="@+id/numberInput1"
+            app:layout_constraintTop_toBottomOf="@+id/operatorSelector"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/calcButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_calc"
+            app:layout_constraintBaseline_toBaselineOf="@+id/numberInput2"
+            app:layout_constraintLeft_toLeftOf="@+id/calcButton1"
+            app:layout_constraintLeft_toRightOf="@+id/numberInput2"
+            app:layout_constraintRight_toRightOf="@+id/calcButton1" />
+
+        <TextView
+            android:id="@+id/calcResult"
+            android:layout_width="92dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/calc_result_default"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@+id/numberInput2"
+            app:layout_constraintTop_toBottomOf="@+id/numberInput2" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/button_background"
+            android:text="@string/button_next"
+            app:layout_constraintRight_toRightOf="@+id/calcButton2"
+            app:layout_constraintTop_toBottomOf="@+id/calcResult" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
